@@ -1,4 +1,4 @@
-#include "handle.hpp"
+#include "helper.hpp"
 #include <iostream>
 #include <vector>
 
@@ -16,8 +16,8 @@ void clientRequests(HelpDesk & helper){
 
 int main(){
     auto accounting = std::make_shared<AccountsHelper>();
-    auto billing = PaymentsHelper();
-    auto repairs = RepairHelper();
+    auto billing = std::make_shared<PaymentsHelper>();
+    auto repairs = std::make_shared<RepairHelper>();
     accounting->setNext(billing)->setNext(repairs);
 
     std::cout << "Chain of command: Acccounting > Payments > Repairs \n\n";
