@@ -1,9 +1,9 @@
 // Created by Matt Perry
 // This is a headerfile for a chain of responisbility example
 // 4/29/2020
-
-#ifndef HELPER_HPP
-#define HELPER_HPP
+// 
+#ifndef HELP_HPP
+#define HELP_HPP
 #include <memory>
 #include <iostream>
 
@@ -14,7 +14,6 @@ public:
     virtual std::string Help(std::string request) = 0;
 
 };
-
 class AbstractHelpDesk : public HelpDesk {
 public:
     AbstractHelpDesk() : _nextHelper(std::shared_ptr<HelpDesk>(nullptr)){}
