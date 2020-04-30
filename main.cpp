@@ -4,7 +4,7 @@
 
 
 void clientRequests(std::shared_ptr<HelpDesk> helper){
-    std::vector<std::string> commands = {"Accounting", "Payments", "Repairs"};
+    std::vector<std::string> commands = {"Accounting", "Payments", "Repairs", "Payments", "Repairs", "Accounting"};
     for(const std::string & c : commands) {
         std::cout << "HelpDesk request to: " << c << "!\n";
         const std::string result = helper->Help(c); 
@@ -26,7 +26,7 @@ int main(){
     std::cout << "Chain of command: Acccounting > Payments > Repairs \n\n";
     clientRequests(accounting);
 
-    std::cout << "Chain starting at Payments > Repairs \n";
+    std::cout << "\n Chain starting at Payments > Repairs \n\n";
     clientRequests(billing);
     return 0;
 }
