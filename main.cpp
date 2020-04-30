@@ -4,7 +4,7 @@
 
 
 void clientRequests(std::shared_ptr<HelpDesk> helper){
-    std::vector<std::string> commands = {"Accounting", "Payments", "Repairs", "Payments", "Repairs", "Accounting"};
+    std::vector<std::string> commands = {"Accounting", "Payments", "Repairs", "Payments", "Repairs", "Accounting", "Apples"};
     for(const std::string & c : commands) {
         std::cout << "HelpDesk request to: " << c << "!\n";
         const std::string result = helper->Help(c); 
